@@ -27,7 +27,7 @@ const Iss = () => {
       <h2>Latitude: {latitude}</h2>
       <button onClick={getCoordinates}>Refresh</button>
       <a href={urlMap} target='_blank'>
-        Pozicia ISS v mapach
+        Position ISS in map
       </a>
     </div>
   );
