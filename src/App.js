@@ -81,7 +81,7 @@ export default App; */
 
 //! Ternary operator
 
-const App = () => {
+/* const App = () => {
   const error = false;
 
   return (
@@ -99,6 +99,24 @@ const App = () => {
           </p>
         </div>
       )}
+    </div>
+  );
+};
+
+export default App; */
+
+//! show and hide button
+
+import { useState } from 'react';
+import Book from './components/Book';
+
+const App = () => {
+  const [show, setShow] = useState(false);
+
+  return (
+    <div>
+      <button onClick={() => setShow(!show)}>Show / hide</button>
+      {show && <Book />}
     </div>
   );
 };
