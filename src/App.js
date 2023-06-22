@@ -55,21 +55,52 @@ export default App; */
 
 //! Short circuit evaluation
 
-const App = () => {
+/* const App = () => {
   const value = 'david';
-  const value2 = 'harry';
+  const value2 = 0;
 
-  const result1 = value && value2;
-  // první je true a druhé jakékoli = se vrací druhá hodnota
-  // první je false a druhé jakékoli = vrací se první hodnota
+    const result1 = value && value2;
+  // první je true  = se vrací druhá hodnota
+  // první je false = vrací se první hodnota
   console.log(result1);
 
   const result2 = value || 'tomas';
-  // první je true a druhé jakékoli = vrací první
-  // první je false, tak vrací druhou
-  console.log(result2);
+  // první je true  = vrací první hodnotu
+  // první je false = vrací druhou hodnotu
+  console.log(result2)
 
-  return <div></div>;
+  return (
+    <div>
+      {<h1>{value2 || 'Default text'}</h1>}
+      {value2 && <h1>Secret</h1>}
+    </div>
+  );
+};
+
+export default App; */
+
+//! Ternary operator
+
+const App = () => {
+  const error = false;
+
+  return (
+    <div>
+      {error ? (
+        <p>chyba</p>
+      ) : (
+        <div>
+          <h2>obsah stranky</h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
+            enim reiciendis eligendi dolorem natus nesciunt? Quae mollitia
+            aliquam, aliquid sequi, totam quod obcaecati accusamus asperiores
+            enim reprehenderit beatae corporis nobis!
+          </p>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default App;
