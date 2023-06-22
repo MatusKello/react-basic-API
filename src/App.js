@@ -18,7 +18,7 @@ export default App; */
 
 //! new training - multiple returns
 
-import { useState, useEffect } from 'react';
+/* import { useState, useEffect } from 'react';
 const url = 'http://api.open-notify.org/iss-now.json';
 
 const App = () => {
@@ -49,6 +49,27 @@ const App = () => {
       <p>{latitude}</p>
     </>
   );
+};
+
+export default App; */
+
+//! Short circuit evaluation
+
+const App = () => {
+  const value = 'david';
+  const value2 = 'harry';
+
+  const result1 = value && value2;
+  // první je true a druhé jakékoli = se vrací druhá hodnota
+  // první je false a druhé jakékoli = vrací se první hodnota
+  console.log(result1);
+
+  const result2 = value || 'tomas';
+  // první je true a druhé jakékoli = vrací první
+  // první je false, tak vrací druhou
+  console.log(result2);
+
+  return <div></div>;
 };
 
 export default App;
